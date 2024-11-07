@@ -17,3 +17,10 @@ cache/
 
 # Ignora configuraciones específicas de Remix
 default_workspace/
+
+# Ignorar carpetas de dependencias
+node_modules/
+.deps/
+
+# Ignorar configuraciones específicas de Remix
+default_workspace/
