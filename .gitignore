@@ -1,0 +1,19 @@
+# Ignora carpetas temporales y archivos de Remix
+.states/
+vm-cancun/
+
+# Archivos y carpetas de dependencias de NPM que pueden ser recreados
+node_modules/
+
+# Archivos de compilación o artefactos de contrato
+artifacts/
+cache/
+*.json
+
+# Configuración del editor y otros archivos innecesarios
+*.log
+*.DS_Store
+*.env
+
+# Ignora configuraciones específicas de Remix
+default_workspace/
