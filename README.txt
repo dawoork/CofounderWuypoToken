@@ -1,28 +1,21 @@
-REMIX DEFAULT WORKSPACE
+Este repositorio ha sido creado para brindar transparencia en la ejecución del contrato inteligente y los tokens de Wuypo. A continuación, se detalla la estructura del repositorio y el propósito de cada carpeta y archivo:
 
-Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
+Estructura del Repositorio
+contracts:
+Esta carpeta contiene el contrato inteligente principal en Solidity que define las reglas de emisión, transferencia y conversión de COW Tokens. El contrato también establece los derechos y beneficios de los poseedores de tokens dentro de la plataforma Wuypo.
 
-This workspace contains 3 directories:
+scripts:
+Aquí se encuentran los scripts de TypeScript necesarios para desplegar el contrato en la blockchain. Los archivos están diseñados para ejecutar el despliegue usando las bibliotecas web3.js y ethers.js. Puedes modificar el nombre del contrato en los scripts (deploy_with_ethers.ts o deploy_with_web3.ts) para adaptarlos a cualquier contrato adicional que desees desplegar.
 
-1. 'contracts': Holds three contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
+tests:
+Esta carpeta incluye archivos de prueba para verificar el funcionamiento del contrato inteligente. Contiene pruebas de Solidity y JavaScript para asegurar que las funciones principales, como la emisión y conversión de tokens, operen correctamente antes de su despliegue.
 
-SCRIPTS
+Scripts de Despliegue
+La carpeta scripts contiene los archivos necesarios para desplegar el contrato principal de Wuypo. Estos scripts utilizan web3.js y ethers.js para interactuar con la blockchain. Para ejecutar los scripts y desplegar el contrato:
 
-The 'scripts' folder has four typescript files which help to deploy the 'Storage' contract using 'web3.js' and 'ethers.js' libraries.
+Asegúrate de que el contrato esté compilado.
+Haz clic derecho en el archivo que deseas ejecutar en el explorador de archivos y selecciona "Run".
+El resultado de la ejecución aparecerá en la terminal de Remix o en el entorno de línea de comandos utilizado.
 
-For the deployment of any other contract, just update the contract's name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts` or  `deploy_with_web3.ts`
-
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
-
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
-
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
+Notas de Transparencia
+Este repositorio representa nuestro compromiso con la transparencia en Wuypo. El código aquí incluido permite a los usuarios y cofundadores auditar y comprender cómo se gestionan los COW Tokens y las reglas del contrato inteligente. De esta forma, Wuypo garantiza una plataforma abierta y confiable para todos los participantes.
